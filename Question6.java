@@ -2,10 +2,24 @@ package Project;
 /*Write a java program to check whether a given number is prime or not?
 */
 
+import java.util.Scanner;
+
 public class Question6 {
     public static void main(String[] args) {
 
-        int[] numbers = {3, 5, 76, 23, 44, 56, 11, 27, 25, 33, 31, 42, 39, 52, 19, 17};
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int number = scanner.nextInt();
+        int count = 0;
+        for (int i = 1; i <= number; i++) {
+            if (number % i == 0) {
+                count++;
+            }
+        }
+        if (count == 2) {
+            System.out.println("It is a prime number");
+        } else {
+            System.out.println("It is not a prime number");
+        }
     }
 }
